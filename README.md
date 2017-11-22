@@ -31,525 +31,281 @@ AWS Whitepapers for AWS-CSA Exam Prep:
 **AWS – Concepts and Components**
 
 -   AWS Global Infrastructure
-
-    -   12 Regions & 33 AZs, 5 more Regions & 11 more AZs coming
-        > throughout the next year
-
+    -   12 Regions & 33 AZs, 5 more Regions & 11 more AZs coming throughout the next year
     -   Region = 2 or more AZs
-
     -   AZ = DataCenter
-
     -   Edge Location = CDN End Points for CloudFront
 
 -   Networking
-
     -   VPC = Virtual Private Cloud
-
-    -   Direct Connect = connecting to AWS w/out using Internet
-        > connection
-
+    -   Direct Connect = connecting to AWS w/out using Internet connection
     -   Route53 = DNS service (port 53… duh)
 
 -   Compute
-
     -   EC2 = virtual server
-
     -   EC2 Container Service = EC2 with Docker
-
-    -   Elastic Beanstalk = Service for deploying web applications
-        > and services. “AWS for beginners”
-
-    -   Lambda = “Most powerful/revolutionary service”. Run code
-        > w/out servers. Pay for execution time, only charged when code
-        > is executed.
+    -   Elastic Beanstalk = Service for deploying web applications and services. “AWS for beginners”
+    -   Lambda = “Most powerful/revolutionary service”. Run code w/out servers. Pay for execution time, only charged when code is executed.
 
 -   Storage
-
-    -   S3 = Object based storage, a place to store flat files in the
-        > cloud
-
-    -   CloudFront = CDN (content delivery network), local caching of
-        > content
-
+    -   S3 = Object based storage, a place to store flat files in the cloud
+    -   CloudFront = CDN (content delivery network), local caching of content
     -   Glacier = long term backup, 3-5 hours to retrieve data
-
     -   EFS = NAS in the cloud, block level storage (in preview)
-
-    -   Snowball = Import/Export service. For moving large amounts of
-        > data in/out of AWS. They ship you a physical suitcase of
-        > disks 
-
-    -   Storage Gateway = VM that you run locally that replicates data
-        > from local datacenter to AWS
+    -   Snowball = Import/Export service. For moving large amounts of data in/out of AWS. They ship you a physical suitcase of disks
+    -   Storage Gateway = VM that you run locally that replicates data from local datacenter to AWS
 
 -   Databases
-
     -   RDS = SQL, Aurora, Oracle, PostgreSQL, MySQL, MariaDB
-
     -   DynamoDB = NoSQL
-
-    -   Elasticache = Caching DB services in cloud to relieve stress on
-        > RDS for high I/O environments
-
+    -   Elasticache = Caching DB services in cloud to relieve stress on RDS for high I/O environments
     -   Redshift = Data warehousing service. Great performance
-
-    -   DMS = Database Migration Services. How to migrate/convert local
-        > DBs into AWS
+    -   DMS = Database Migration Services. How to migrate/convert local DBs into AWS
 
 -   Analytics
-
     -   EMR = Elastic Map Reduce. A way of processing big data
-
         -   Managed web service Hadoop clusters
-
     -   Data Pipeline = moving data from one service to another
-
-    -   Elastic Search = Managed service to deploy/operate a search
-        > engine in cloud
-
-    -   Kinesis = managed service platform for real time streaming of
-        > big data.
-
-        -   Web apps, mobile devices, wearables generate huge amounts of
-            > streaming data.
-
+    -   Elastic Search = Managed service to deploy/operate a search engine in cloud
+    -   Kinesis = managed service platform for real time streaming of big data.
+        -   Web apps, mobile devices, wearables generate huge amounts of streaming data.
         -   Use kinesis to digest big data
-
-    -   Machine Learning = for use by developers to work with
-        > machine learning…. (not in test)
-
+    -   Machine Learning = for use by developers to work with machine learning…. (not in test)
     -   Quick Sight = Business Intelligence service (not in test)
 
 -   Security & Identity
-
     -   IAM = control users, roles, groups, policies
-
     -   Directory Services
-
-    -   Inspector = install agents on EC2 instances & check for
-        > vulnerabilities (not in test)
-
+    -   Inspector = install agents on EC2 instances & check for vulnerabilities (not in test)
     -   WAF = Web Application Firewall condition sets:
-
         -   IP Match
-
         -   String Match
-
         -   SQL Injection Match
-
         -   Size Constraint
-
         -   Cross-site Scripting Match
-
     -   Cloud HSM = Hardware Security Module
-
     -   Certificate Manager
 
 -   Management Tools
-
     -   CloudWatch = Monitor
-
     -   CloudFormation = Use templates to create infrastructure stacks
-
-        -   Use “CloudFormer” to create a template of your existing
-            > infrastructure to capture and redeploy applications you
-            > already have running
-
-        -   
+        -   Use “CloudFormer” to create a template of your existing infrastructure to capture and redeploy applications you already have running
 
     -   CloudTrail = track user & API activity
-
         -   By default, log files are stored indefinitely
-
     -   Config = Track resources & inventory changes (not in test)
-
     -   OpsWorks = automation
-
         -   Orchestration service that uses Chef
-
         -   Chef consists of recipes to maintain a consistent state
-
-        -   Look for “chef”, “recipes”, “cookbook” in exam & think
-            > Opsworks
-
+        -   Look for “chef”, “recipes”, “cookbook” in exam & think Opsworks
     -   Service Catalog = not in test
-
-    -   Trusted Advisor = scans environment for ways to save money &
-        > increase security
+    -   Trusted Advisor = scans environment for ways to save money & increase security
 
 -   Application Svcs
-
     -   API Gateway = not in test
-
     -   AppStream = AWS version of XenApp
-
     -   CloudSearch = Managed search solution
-
-    -   Elastic Transcoder = Media transcoding service, change media
-        > files from source format to destination format
-
+    -   Elastic Transcoder = Media transcoding service, change media files from source format to destination format
     -   SES = Simple Email Service = send/receive emails
-
     -   SQS = Simple Queue Service, a way of decoupling infrastructure
-
     -   SWF = Simple WorkFlow Service
 
 -   Dev Tools (not in test)
-
     -   CodeCommit = “Github”
-
     -   CodeDeploy = automates code deployment
-
     -   CodePipeline = build, test, deploy code
 
 -   Mobile Svcs (not in test, except for SNS)
-
     -   Mobile Hub = test mobile apps
-
     -   Cognito = save mobile user data in AWS cloud
-
-    -   Device Farm = test against real smartphones & tablets in AWS
-        > cloud
-
+    -   Device Farm = test against real smartphones & tablets in AWS cloud
     -   Mobile Analytics =
-
-    -   SNS = big topic in exam, Simple Notification Service. Way to
-        > send notifications from cloud
+    -   SNS = big topic in exam, Simple Notification Service. Way to send notifications from cloud
 
 -   Enterprise Applications
-
     -   WorkSpaces = VDI
-
         -   Replaces Windows PC in the cloud (PCoIP)
-
         -   Runs Windows 7, provided by Windows Server 2008 R2
-
         -   Are persistent (EBS)
-
         -   All data on D drive backed up every 12 hours
-
         -   Do not need an AWS account to login to workspaces
-
         -   Don’t need an existing AD domain, can use free client app
-
         -   Can integrate with existing AD domain
-
         -   By default:
-
-            -   Users can personalize their WorkSpaces with wallpaper,
-                > icons, shortcuts, etc..
-
+            -   Users can personalize their WorkSpaces with wallpaper, icons, shortcuts, etc..
             -   Users have local admin access to install apps
-
     -   WorkDocs = DropBox for enterprise
-
     -   WorkMail = Exchange
-
+    
 -   IoT
-
     -   Internet of Things = not in test
 
 **Identity Access Management (IAM)**
 
 -   Central control of AWS account
-
 -   Share access
-
 -   Granular permissions of accounts/groups/roles/policies
-
 -   Identity Federation (AD, Facebook, LinkedIn, etc…)
-
 -   MFA = Multi Factor Authentication
-
 -   Temp access for users/devices/services
-
 -   Pwd rotation policy highly customizable
-
 -   Policies = JSON key/value pairs
-
 -   IAM is universal, applies to all regions consistently
-
 -   New Users have no permissions when 1<sup>st</sup> created
-
--   New Users are assigned an access key ID & secret access key when
-    > first created, only viewable once so download it & secure!
-
+-   New Users are assigned an access key ID & secret access key when first created, only viewable once so download it & secure!
 -   Always setup MFA on root
-
 -   Integrated with AWS marketplace
 
 **S3**
 
--   Secure, durable, highly scalable object storage.
-    > “Unlimited storage”. A hard drive in the cloud.
-
--   Object based NOT block based storage (no OS or DBs -&gt; that’s
-    > Elastic Block Storage (EBS)). i.e. allows you to upload files
-
+-   Secure, durable, highly scalable object storage. “Unlimited storage”. A hard drive in the cloud.
+-   Object based NOT block based storage (no OS or DBs -&gt; that’s Elastic Block Storage (EBS)). i.e. allows you to upload files
 -   0 byte to 5Tb file size
-
 -   Files are stored in buckets
-
 -   S3 is a universal namespace, each one must be unique:
-
-    -   -   <http://s3-aws-region.amazonaws.com/%3Cbucket>&gt;
+    -   <http://s3-aws-region.amazonaws.com/%3Cbucket>&gt;
 
 -   EXAM Tips
-
     -   Read after Write consistency for PUTS of new Objects
-
-    -   Eventual consistency for overwrite PUTS and DELETES as it can
-        > take time to propagate
+    -   Eventual consistency for overwrite PUTS and DELETES as it can take time to propagate
 
 -   S3 = Object based. Objects consist of the following:
-
     -   Key = name of the object
-
     -   Value = the data
-
     -   Version ID (for versioning)
-
     -   Metadata (tags)
-
     -   Subresources
-
     -   Access Control Lists (ACLs)
 
 -   99.99% availability
-
 -   99.999999999% durability
-
 -   Tiered storage
-
 -   Lifecycle mgmt.
-
     -   Can be used in conjunction with versioning
-
     -   Can be applied to both current & previous versions
-
     -   Actions:
-
         -   Transition to S3-IA (128Kb & 30 days after creation)
-
         -   Archive to Glacier (30 days after S3-IA, if relevant)
 
 -   Encryption, ACLs & Bucket Policies
-
 -   Storage Tiers
-
     -   S3
-
         -   99.99% availability
-
         -   99.999999999% durability
-
-        -   Redundant, designed to sustain loss of 2 facilities
-            > concurrently
+        -   Redundant, designed to sustain loss of 2 facilities concurrently
 
     -   S3-IA (infrequently accessed)
-
         -   99.9% availability
-
         -   99.999999999% durability
-
         -   Lower fee than S3, but charged a retrieval fee
 
     -   S3-RRS (Reduced Redundancy Storage)
-
         -   99.99% availability
-
         -   99.99% durability
 
     -   Glacier
-
         -   Very cheap (as little as $0.01 GB/mo.)
-
         -   Used for archive only
-
         -   Takes 3-5 hours to restore from Glacier
 
 -   Versioning
-
-    -   Stores all versions of an object (including all writes
-        > and deletes)
-
+    -   Stores all versions of an object (including all writes and deletes)
     -   Great backup tool
-
     -   Cannot disable versioning once enabled, but you can suspend
-
     -   Integrates with lifecycle rules
-
-    -   Can use MFA delete capability, so that you can’t delete without
-        > MFA
-
-    -   Cross Region Replication requires versioning – only applies to
-        > files manipulated \*after\* CRR is turned on
-
-    -   Can take up a LOT of space on files that change a lot (because
-        > it stores each changed version)
+    -   Can use MFA delete capability, so that you can’t delete without MFA
+    -   Cross Region Replication requires versioning – only applies to files manipulated \*after\* CRR is turned on
+    -   Can take up a LOT of space on files that change a lot (because it stores each changed version)
 
 **S3 – Security & Encryption**
-
 -   By default, all new buckets are PRIVATE
-
 -   2 types of access control for buckets
-
     -   Bucket policies
-
     -   ACLs
 
 -   Buckets can be configured to log all requests
-
     -   Can be done to another bucket or to another AWS account
 
 -   Encryption – 4 methods
-
     -   In transit – information to/from bucket
-
         -   Uses SSL/TLS
-
     -   At rest:
-
         -   Server Side Encryption (SSE)
-
             -   S3 Managed keys – **SSE-S3**
-
             -   AWS Key Management Service, Managed Keys – **SSE-KMS**
-
                 -   Provides usage audit trail
-
             -   SSE w/ Customer Provided Keys – **SSE-C**
-
-    -   Client Side Encryption – the customer encrypts data prior to
-        > uploading to bucket
+    -   Client Side Encryption – the customer encrypts data prior to uploading to bucket
 
 **CloudFront – CDN (Content Delivery Network)**
 
--   Edge Location – Where the content will be cached (different from
-    > Region or AZ)
-
+-   Edge Location – Where the content will be cached (different from Region or AZ)
     -   Not just read only, can write to them too.
-
     -   Objects are cached for the life of the TTL (default 24 hours)
-
     -   Can clear cached objects, but you will be charged
 
--   Origin – Where the original server content is located (S3 Bucket,
-    > EC2 instance, Route53, or ELB for AWS)
-
--   Not faster for the 1<sup>st</sup> user, but faster for every other
-    > subsequent user
-
+-   Origin – Where the original server content is located (S3 Bucket, EC2 instance, Route53, or ELB for AWS)
+-   Not faster for the 1<sup>st</sup> user, but faster for every other subsequent user
 -   Can be used for static, dynamic, streaming & interactive content
-
 -   Requests are automagically routed to nearest Edge Location
-
 -   Optimized to work well with other AWS services (duh)
-
 -   Also works with non-AWS origin servers (the “definitive version”)
-
 -   2 types of Distributions:
-
     -   Web Distribution – Used for websites
-
     -   RTMP Distribution – used for media streaming
 
 -   CloudFront options
-
-    -   Restrict Viewer Access – restrict using signed URLs or signed
-        > cookies
+    -   Restrict Viewer Access – restrict using signed URLs or signed cookies
 
 **Storage Gateway**
 
--   Connects on-prem software appliance with AWS storage to provide
-    > seamless & secure between an org’s on-prem IT environment & AWS
-    > storage infrastructure.
-
+-   Connects on-prem software appliance with AWS storage to provide seamless & secure between an org’s on-prem IT environment & AWS storage infrastructure.
 -   Asynch replication backed up to S3 as EBS snapshots
-
 -   Data is stored within a single region (user specified)
-
 -   Software appliance is supported on VMware or Hyper-V
-
 -   3 types of storage gateways:
 
     -   **Gateway Stored Volumes (cloud is backup)**
-
         -   Keep entire data set on-prem & asynch backed up to S3
-
-        -   Create storage volumes up to 16TB in size & mount them as
-            > iSCSI devices
-
+        -   Create storage volumes up to 16TB in size & mount them as iSCSI devices
         -   Used for offsite backups
-
-        -   Constantly replicating changes up to S3 in the form of
-            > Amazon EBS snapshots
+        -   Constantly replicating changes up to S3 in the form of Amazon EBS snapshots
 
     -   **Gateway Cached Volumes (cloud is primary)**
-
-        -   Only most frequently accessed data is stored on-prem, entire
-            > data set is stored in S3
-
+        -   Only most frequently accessed data is stored on-prem, entire data set is stored in S3
         -   Using S3 as your SAN array
-
-        -   Create storage volumes up to 32TBs in size & mount them as
-            > iSCSI devices
-
-        -   If you lose internet access, you lose access to all your
-            > data
+        -   Create storage volumes up to 32TBs in size & mount them as iSCSI devices
+        -   If you lose internet access, you lose access to all your data
 
     -   **Gateway Virtual Tape Library (VTL)**
-
         -   Limitless collection of virtual tapes
-
         -   Up to 10 virtual tape drives per gateway
-
-        -   Exposes iSCSI interface so populat backup application
-            > (Netbackup , Backup Exec, Veeam, ect..) can point directly
-            > to VTL
+        -   Exposes iSCSI interface so populat backup application (Netbackup , Backup Exec, Veeam, ect..) can point directly to VTL
 
 -   Pricing:
-
     -   Only pay for what you use, 4 pricing components:
-
         -   Gateway usage (per gateway per month)
-
         -   Snapshot storage usage (per GB per month)
-
         -   Volume storage usage (per GB per month)
-
         -   Data xfer out (per GB per month)
 
 **Snowball (Import/Export) **2 Types:
-
 -   Import/Export Disk
-
     -   You ship your disks to AWS site of your choice
-
     -   Import into S3, Glacier, or EBS
-
     -   Export from S3 
 
 -   Import/Export Snowball
-
     -   Available in US, EU(Ireland) & APAC(Sydney)
-
     -   50TB or 80TB models available
-
     -   256-bit encryption
-
     -   TPM ensures chain-of-custody
-
     -   Import into S3 only
-
     -   Export from S3
 
 **S3 Transfer Acceleration (probably not in exam yet)**
-
 -   Use Edge Network to accelerate uploads to your S3 bucket
-
 -   Better performance the further you are away from your bucket
-
 -   Incurs an additional fee
 
 **EC2 (Elastic Compute Cloud) – “**A web service that provides resizable
@@ -560,40 +316,21 @@ capacity both up and down.”
 Pricing models:
 
 -   On Demand – pay fixed rate by the hour with no commitment
-
-    -   Best for burst need servers & unpredictable workloads that
-        > cannot be interrupted
-
-    -   For users that want flexibility of EC2 w/out up-front payments
-        > or long-term commitment
-
+    -   Best for burst need servers & unpredictable workloads that cannot be interrupted
+    -   For users that want flexibility of EC2 w/out up-front payments or long-term commitment
     -   Test/Dev for apps running on EC2 for the 1<sup>st</sup> time.
+    -   Supplement reserved instance servers (for extra temporary server load)
 
-    -   Supplement reserved instance servers (for extra temporary
-        > server load)
-
--   Reserved – 1 or 3 year term. Discount compared to On Demand, the
-    > longer your contract, the more you save.
-
+-   Reserved – 1 or 3 year term. Discount compared to On Demand, the longer your contract, the more you save.
     -   Best for “steady state” systems that you’ll always have running
-
-    -   Apps that need reserved capacity, steady state or predictable
-        > usage
-
+    -   Apps that need reserved capacity, steady state or predictable usage
         -   Domain Controllers
-
         -   1<sup>st</sup> web server
 
--   Spot – Allows you to bid for whatever price you want to pay for
-    > instance capacity (by hour).
-
+-   Spot – Allows you to bid for whatever price you want to pay for instance capacity (by hour).
     -   When your bid = spot price, you get a server
-
-    -   When spot price exceeds your bid, you lose server with 1 hour
-        > warning
-
-    -   Best used for grid computing where instances are disposable &
-        > applications have flexible start/stop times
+    -   When spot price exceeds your bid, you lose server with 1 hour warning
+    -   Best used for grid computing where instances are disposable & applications have flexible start/stop times
 
     -   If spot instance is terminated by EC2, you don’t get charged for
         > partial hour of usage. If \*you\* terminate, you’ll get
