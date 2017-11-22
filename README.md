@@ -454,7 +454,7 @@ mount
     -   *Aws s3 help*
         -   Make Bucket = mb
         -   Remove Bucket = rb
-<img src="images/060116_1515_AWSCertifie3.png.png" width="656" height="229" />
+![Image01](/images/060116_1515_AWSCertifie3.png?raw=true)
 -   If you use roles, you don’t have to store your credentials on your EC2 instance (which is a security risk)
 
 **IAM – Roles**
@@ -485,7 +485,7 @@ mount
     -   *Chkconfig httpd on*
 -   Provision an AWS AMI instance per usual, but in the advanced section put in the above script
 
-<img src="media/image4.png" width="656" height="599" />
+![Image04](/images/060116_1515_AWSCertifie4.png?raw=true)
 
 **Instance Metadata –**
 -   How to access instance metadata from within an EC2 instance. From CLI:
@@ -496,7 +496,7 @@ mount
             -   Trigger a lambda function to update DNS
             -   Whatever else you can think of 
 
-<img src="media/image5.png" width="656" height="433" />
+![Image05](/images/060116_1515_AWSCertifie5.png?raw=true)
 
 **Auto scaling Groups**
 -   Have to have a launch configuration to have an auto scaling group
@@ -779,11 +779,11 @@ mount
     -   Need to attach IGW after you create it
 -   Need to create InternetRouteTable if you want VPC to communicate in/out 
 
-<img src="media/image6.png" width="547" height="214" />
+![Image06](/images/060116_1515_AWSCertifie6.png?raw=true)
 
 -   Once you’ve created your IGW, any subnet associations you make to it will be internet accessible:
 
-<img src="media/image7.png" width="560" height="171" />
+![Image06](/images/060116_1515_AWSCertifie6.png?raw=true)
 
 -   A security group can stretch across multiple Regions/AZs where a subnet cannot
 
@@ -1036,7 +1036,7 @@ Compliance**: <http://d0.awsstatic.com/whitepapers/compliance/AWS_Risk_and_Compl
 
 AWS Platform:
 
-<img src="media/image8.png" width="396" height="260" />
+![Image08](/images/060116_1515_AWSCertifie8.png?raw=true)
 
 **Storage Options in the Cloud: (2 docs?)**
 
