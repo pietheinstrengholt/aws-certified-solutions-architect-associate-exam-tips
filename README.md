@@ -453,7 +453,7 @@ mount
     -   *Aws s3 help*
         -   Make Bucket = mb
         -   Remove Bucket = rb
-<img src="media/image3.png" width="656" height="229" />
+<img src="images/060116_1515_AWSCertifie3.png.png" width="656" height="229" />
 -   If you use roles, you don’t have to store your credentials on your EC2 instance (which is a security risk)
 
 **IAM – Roles**
