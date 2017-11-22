@@ -1,7 +1,7 @@
 # AWS Certified Solutions Architect summary 
 
-After I have subscribed myself to A Cloud Guru I had the needs to write down a summary of what I learned, before taking the AWS Certified Solutions Architect Exam. Most of the materials I found on the following website: http://mistwire.com/2016/05/aws-certified-solutions-architect-associate-study-notes/, So a special thanks for Chris f Williams for putting everything together.
-Most of the information is still valid, although some things have been changed. I also highly encourage you to have a look at the AWS 2016 re:Invent 2016 video's. They cover the most importance services you need to learn with a more detailed background compared to the videos from A Cloud Gure. 
+After I have subscribed myself to A Cloud Guru I had the needs to write down a summary of what I learned, before taking the AWS Certified Solutions Architect Exam. Most of the materials I found on the following website: http://mistwire.com/2016/05/aws-certified-solutions-architect-associate-study-notes/, so a special thanks for Chris f Williams for putting everything together.
+Most of the information is still valid, although some things I have changed. It is highly encourage to also have a look at the AWS 2016 re:Invent 2016 video's if you consider taking the exam. They cover the most importance services you need to learn with a more detailed background compared to the videos from A Cloud Guru. 
 
 I have updated the document below. Feel free to create a pull request to update any missing or incorrect information.
 
