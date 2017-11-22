@@ -1163,268 +1163,135 @@ mount
             > performance
 
     -   Advanced Compression
-
-        -   Columnar data can be compressed much better than row based
-            > data
-
-        -   Redshift automatically samples data & chooses the best
-            > compression scheme
-
+        -   Columnar data can be compressed much better than row based data
+        -   Redshift automatically samples data & chooses the best compression scheme
     -   Massively Parallel Processing (MPP):
-
-        -   Automatically distributes data & query load across all nodes
-            > & newly added nodes
-
+        -   Automatically distributes data & query load across all nodes & newly added nodes
     -   Pricing:
-
         -   Compute Node Hours
-
             -   1 unit per node per hour
-
         -   Backup
-
         -   Data Transfer
-
     -   Security
-
         -   Encrypted in transit using SSL
-
         -   At rest using AES-256
-
         -   By default RedShift does it’s own key mgmt.
-
-            -   Can manage keys through HSM (hardware security modules)
-                > or KMS if you want
-
+            -   Can manage keys through HSM (hardware security modules) or KMS if you want
     -   Only available in 1 AZ
-
         -   Can restore snaps to new AZs in the event of an outage
-
-    -   Good choice if mgmt. runs lots of OLAP transactions & it’s
-        > stressing the DB
-
+    -   Good choice if mgmt. runs lots of OLAP transactions & it’s stressing the DB
     -   Think Business Intelligence (BI)
 
 -   Elasticache
 
-    -   Caches things – if your app is constantly going to a DB to pull
-        > the same data over and over, you can cache it for faster
-        > performance
-
-    -   Used to improve latency and throughput for **read-heavy
-        > app** workloads (social networks, gaming, media sharing)
-        > or **compute heavy** workloads (recommendation engine)
-
-    -   Improves application performance by storing critical pieces of
-        > data in mem for low-latency access.
-
+    -   Caches things – if your app is constantly going to a DB to pull the same data over and over, you can cache it for faster performance
+    -   Used to improve latency and throughput for **read-heavy app** workloads (social networks, gaming, media sharing) or **compute heavy** workloads (recommendation engine)
+    -   Improves application performance by storing critical pieces of data in mem for low-latency access.
     -   Types of elasticache
-
         -   Memcached
-
             -   Widely adopted mem object caching system.
-
         -   Redis
-
             -   Open source in-mem key/value store.
-
-        -   Supports master/slave replication & multi-AZ to achieve
-            > cross AZ redundancy
-
-    -   Good choice if your DB is read heavy & not prone to frequent
-        > changing
+        -   Supports master/slave replication & multi-AZ to achieve cross AZ redundancy
+    -   Good choice if your DB is read heavy & not prone to frequent changing
 
 -   Aurora
-
     -   MySQL compatible RDS DB engine
-
     -   Speed & availability of commercial DBs
-
     -   Simplicity & cost-effectiveness of open source DBs
-
-    -   5x better performance than MySQL @ 1/10<sup>th</sup> the price
-        > of commercial DB w/ similar performance & availability
-
+    -   5x better performance than MySQL @ 1/10<sup>th</sup> the price of commercial DB w/ similar performance & availability
     -   Big challenge to Oracle
-
     -   Scaling capabilities:
-
         -   Start w/ 10Gb, scales in 10Gb increments up to 64Tb
-
         -   Compute scales up to 32vCPUs & 244Gb of mem
-
-        -   2 copies of DB in each AZ w/ a min of 3 AZs (6 copies
-            > of data)
-
-        -   Can handle loss of 2 copies w/out affecting write
-            > availability
-
-        -   Can handle loss of 3 copies w/out affecting read
-            > availability
-
-        -   Storage is self-healing. Blocks & disks are constantly
-            > scanned & repaired
-
+        -   2 copies of DB in each AZ w/ a min of 3 AZs (6 copies of data)
+        -   Can handle loss of 2 copies w/out affecting write availability
+        -   Can handle loss of 3 copies w/out affecting read availability
+        -   Storage is self-healing. Blocks & disks are constantly scanned & repaired
     -   Replica features:
-
         -   Aurora Replicas (currently 15)
-
         -   MySQL read replicas (currently 5)
 
 **VPC (Virtual Private Cloud)**
 
 -   **For the exam know how to build a custom VPC from memory**
-
     -   Create VPC
-
         -   Define IP range (automatically creates default route table)
-
         -   Create subnets (automatically creates route table & nACL)
-
             -   Largest = /16, Smallest = /28
-
-            -   AWS reserves the 1<sup>st</sup> 4 and last 1 IP address
-                > of any subnet, so /28 = 11 useable IPs
-
+            -   AWS reserves the 1<sup>st</sup> 4 and last 1 IP address of any subnet, so /28 = 11 useable IPs
         -   Create IGW
-
-            -   By default it’s detached, need to manually attach it to
-                > VPC
-
+            -   By default it’s detached, need to manually attach it to VPC
         -   Create custom route table & attach IGW to it
-
         -   Associate public subnet(s) to use new route
-
         -   Launch 1 instance per subnet
-
         -   Provision EC2 NAT instance
-
             -   Create security group for NAT instance
 
 -   VPC = Think of it as a Virtual Datacenter
-
     -   By default you are allowed 5 VPCs per region
-
-    -   Logically isolated section of AWS where you can launch AWS
-        > resources in a virtual network of your own definition
-
-    -   You control the network environment: IP address range, subnets,
-        > routing tables, gateways, etc
+    -   Logically isolated section of AWS where you can launch AWS resources in a virtual network of your own definition
+    -   You control the network environment: IP address range, subnets, routing tables, gateways, etc
 
 -   Default VPC vs Custom VPC
-
     -   Default is user friendly, can deploy instances right away
-
     -   All subnets in default VPC have an internet gateway attached
-
     -   Each EC2 instance has both a public & private IP address
-
     -   If you delete default VPC, you have to call AWS to get it back
 
 -   VPC Peering
-
-    -   Connect 1 VPC to another VPC via direct network route using
-        > private IP addresses
-
+    -   Connect 1 VPC to another VPC via direct network route using private IP addresses
     -   Instances behave as if they were on the same private network
-
-    -   You can peer VPC’s with other AWS accounts & with other VPC’s in
-        > the same account **within a single region**
-
-    -   AWS uses the existing infrastructure of a VPC to create a VPC
-        > peering connection. 
-
+    -   You can peer VPC’s with other AWS accounts & with other VPC’s in the same account **within a single region**
+    -   AWS uses the existing infrastructure of a VPC to create a VPC peering connection. 
     -   It is not a gateway or a VPN connection.
-
     -   It does not rely on a separate piece of hardware
-
     -   No SPoF for communication or bandwidth bottleneck
-
-    -   Peering is done in a star configuration. VPC A  VPC B  VPC C
-        > = A cannot talk to C unless you connect directly (**no
-        > transitive peering**)
-
+    -   Peering is done in a star configuration. VPC A  VPC B  VPC C = A cannot talk to C unless you connect directly (**no transitive peering**)
     -   **Peers cannot have matching or overlapping CIDR blocks**
-
--   By default when you create a VPC it will automatically create a
-    > route table
-
--   If you choose dedicated tenancy for your VPC, any instances you
-    > create in that VPC will also be dedicated
-
+-   By default when you create a VPC it will automatically create a route table
+-   If you choose dedicated tenancy for your VPC, any instances you create in that VPC will also be dedicated
 -   1 subnet = 1 AZ, you cannot have subnets cross AZ
-
 -   Don’t forget to add internet gateway
-
     -   1 IGW per VPC
-
     -   Need to attach IGW after you create it
+-   Need to create InternetRouteTable if you want VPC to communicate in/out 
 
--   Need to create InternetRouteTable if you want VPC to communicate
-    > in/out 
+<img src="media/image6.png" width="547" height="214" />
 
-> <img src="media/image6.png" width="547" height="214" />
+-   Once you’ve created your IGW, any subnet associations you make to it will be internet accessible:
 
--   Once you’ve created your IGW, any subnet associations you make to it
-    > will be internet accessible:
+<img src="media/image7.png" width="560" height="171" />
 
-> <img src="media/image7.png" width="560" height="171" />
-
--   A security group can stretch across multiple Regions/AZs where a
-    > subnet cannot
+-   A security group can stretch across multiple Regions/AZs where a subnet cannot
 
 <!-- -->
 
 -   VPC Flow Logs:
 
-    -   Enables you to capture information about the IP traffic going to
-        > and from network interfaces in your VPC
-
-    -   Data is stored using Amazon CloudWatch Logs, you can view and
-        > retrieve its data in Amazon CloudWatch Logs.
-
+    -   Enables you to capture information about the IP traffic going to and from network interfaces in your VPC
+    -   Data is stored using Amazon CloudWatch Logs, you can view and retrieve its data in Amazon CloudWatch Logs.
     -   Help with a number of tasks:
-
-        -   Troubleshoot why specific traffic is not reaching an
-            > instance
-
+        -   Troubleshoot why specific traffic is not reaching an instance
         -   Diagnose overly restrictive security group rules
-
-        -   Security tool to monitor the traffic that is reaching
-            > your instance.
-
-    -   
+        -   Security tool to monitor the traffic that is reaching your instance.
 
 **Network Address Translation (NAT)**
-
--   Allows your instances that do not have internet access the ability
-    > to access the internet via a NAT server instance
-
+-   Allows your instances that do not have internet access the ability to access the internet via a NAT server instance
 -   create security group
-
 -   allow inbound & outbound on HTTP and HTTPS
-
 -   provision NAT inside public subnet
-
--   **On a NAT instance, you need to change source/destination check to
-    > disabled**
-
+-   **On a NAT instance, you need to change source/destination check to disabled**
 -   Set up route on private subnet to route through NAT instance
 
 **Access Control Lists (ACLs)**
 
 -   A numbered list of rules (in order, lowest applies first)
-
 -   Put down network access lists across the entire subnet
-
 -   Over rules security groups
-
 -   Acts as a basic firewall
-
 -   VPC automatically comes with an ACL
-
 -   When you create a new ACL, by default everything is DENY
-
 -   Only one ACL per subnet, but many subnets can have the same ACL
 
 **Application Services**
@@ -1432,191 +1299,97 @@ mount
 **SQS – most important service going into exam**
 
 -   Read FAQ for SQS for exam: <https://aws.amazon.com/sqs/faqs/>
-
--   A distributed message queueing service that sits between a
-    > “producer” and “consumer” to quickly and reliably cache
-    > that message.
-
--   Allows you to decouple the components of an app so that they can
-    > run independently.
-
+-   A distributed message queueing service that sits between a “producer” and “consumer” to quickly and reliably cache that message.
+-   Allows you to decouple the components of an app so that they can run independently.
 -   Eases message management between components
-
 -   Any component can later retrieve the queued message using SQS API
-
 -   Queue resolves issues if:
-
-    -   The producer is producing work faster than consumer is
-        > processing
-
-    -   Producer or consumer are only intermittently connected to
-        > network
-
+    -   The producer is producing work faster than consumer is processing
+    -   Producer or consumer are only intermittently connected to network
 -   Ensures delivery of each message at least once
-
 -   Supports multiple writers and readers on the same queue
-
 -   Can apply autoscaling to SQS 
-
--   A single queue can be used by many app components with no need for
-    > those components to coordinate amongst themselves to share the
-    > queue
-
--   SQS does NOT guarantee first in, first out (FIFO) delivery of
-    > message
-
-    -   If you want this, you need to place sequencing information in
-        > each message so that you can reorder the messages after they
-        > come out of queue
-
+-   A single queue can be used by many app components with no need for those components to coordinate amongst themselves to share the queue
+-   SQS does NOT guarantee first in, first out (FIFO) delivery of message
+    -   If you want this, you need to place sequencing information in each message so that you can reorder the messages after they come out of queue
 -   SQS is a pull based system
-
 -   12 hour visibility time out by default
-
--   Engineered to provide “at least once” delivery of mgs, but you
-    > should design your app so that processing a message more than once
-    > won’t create an error
-
+-   Engineered to provide “at least once” delivery of mgs, but you should design your app so that processing a message more than once won’t create an error
 -   Messages can contain up to 256KB of text in any format
-
 -   Billed at 64KB “chunk” – a 25kKB msg will be 4 x 64KB “chunks”
-
 -   1<sup>st</sup> 1 million SQS requests per month are free
-
 -   $0.50 per 1 million requests per month thereafter
-
--   A single request can have from 1 to 10 messages, up to a max total
-    > payload of 256KB
-
+-   A single request can have from 1 to 10 messages, up to a max total payload of 256KB
 -   Each 64KB ‘chunk’ of payload is billed as 1 request.
-
     -   Ex: 1 API call with a 256KB payload is billed as 4 requests
 
 **SWF – Simple Workflow Service**
 
 -   Makes it easy to coordinate work across distributed app components
-
 -   Enables apps to be designed as a coordination of tasks
-
--   Tasks represent invocations of various processing steps in a app
-    > which can be performed by:
-
+-   Tasks represent invocations of various processing steps in a app which can be performed by:
     -   Executable code
-
     -   Web service calls
-
     -   Human actions
-
     -   Scripts
 
--   Amazon uses SWF to process orders on the amazon website to get you
-    > your stuffs
-
+-   Amazon uses SWF to process orders on the amazon website to get you your stuffs
 -   SWF vs SQS
-
-    -   SQS has a retention period of 14 days, SWF up to 1 year for
-        > workflow executions
-
+    -   SQS has a retention period of 14 days, SWF up to 1 year for workflow executions
     -   SWF presents task-oriented API, SQS = message-oriented API
-
-    -   SWF ensures a task is assigned only once and never duplicated,
-        > with SQS you need to handle the potential for duplicate
-        > messages
-
-    -   SWF keeps track of all the tasks & events in an application.
-        > With SQS you need to implement application-level tracking,
-        > especially if you have multiple queues.
+    -   SWF ensures a task is assigned only once and never duplicated, with SQS you need to handle the potential for duplicate messages
+    -   SWF keeps track of all the tasks & events in an application. With SQS you need to implement application-level tracking, especially if you have multiple queues.
 
 -   SWF Actors (3 types):
-
-    -   Workflow Starters – an app that can initiate a workflow
-        > (amazon.com front end when placing an order)
-
-    -   Deciders – control the flow of activity tasks (if cc declined –
-        > decide to send to alternative payments page)
-
-    -   Activity workers – carry out tasks (payment now successful, go
-        > pull widget off shelf & mail it)
+    -   Workflow Starters – an app that can initiate a workflow (amazon.com front end when placing an order)
+    -   Deciders – control the flow of activity tasks (if cc declined – decide to send to alternative payments page)
+    -   Activity workers – carry out tasks (payment now successful, go pull widget off shelf & mail it)
 
 **SNS – Simple Notification Service**
 
 -   Web service to setup, operate & send notifications from AWS.
-
--   Scalable, flexible, cost-effective way to publish messages from an
-    > app & deliver them to subscribers or other apps
-
+-   Scalable, flexible, cost-effective way to publish messages from an app & deliver them to subscribers or other apps
 -   Push notification to Apple, Google, Fire OS, Windows devices, etc..
-
--   Can deliver via SMS text messages, email, SQS queues, any HTTP
-    > endpoint
-
+-   Can deliver via SMS text messages, email, SQS queues, any HTTP endpoint
 -   Can also trigger Lambda functions
 
 -   SNS Subscribers:
-
     -   HTTP/S
-
     -   Email/Email-JSON
-
     -   SQS
-
     -   Application
-
     -   Lambda
 
 -   Allows you to group multiple recipients using topics
-
 -   One topic can support delivery to multiple endpoints types
+    -   “Autoscale change” to my phone, my email etc… all properly formatted for the endpoint
 
-    -   “Autoscale change” to my phone, my email etc… all properly
-        > formatted for the endpoint
-
--   All messages published to SNS are stored redundantly across multiple
-    > AZs
+-   All messages published to SNS are stored redundantly across multiple AZs
 
 -   Instantaneous, push-based deliver (no polling)
-
 -   Simple APIs & easy integration with apps
-
 -   Flexible message delivery over multiple transport protocols
-
 -   Pay as you go model with no up-front costs
-
 -   Mgmt console offers simple point/click interface
 
 -   SNS vs SQS
-
     -   Both messaging services in AWS
-
     -   SNS – Push
-
     -   SQS – Polls (pulls)
 
 -   Pricing:
-
     -   $0.50 per 1 million SNS requests
-
     -   $0.06 per 100,000 notification deliveries over HTTP
-
     -   $0.75 per 100 notification deliveries over SMS
-
     -   $2.00 per 100,000 notification deliveries over email
 
 **Elastic Transcoder**
 
 -   Media transcoder in the cloud
-
--   Converts media file from original source format into different
-    > formats that will play on different endpoint devices
-
+-   Converts media file from original source format into different formats that will play on different endpoint devices
 -   Provides transcoding presets for popular output formats
-
-    -   Don’t need to guess about which settings work best on particular
-        > devices
-
--   Pay based on the minutes that you transcode & the resolution at
-    > which you transcode
-
+    -   Don’t need to guess about which settings work best on particular devices
+-   Pay based on the minutes that you transcode & the resolution at which you transcode
 -   [https://read.acloud.guru/easy-video-transcoding-in-aws-7a0abaaab7b8\#.eepluawzo](https://read.acloud.guru/easy-video-transcoding-in-aws-7a0abaaab7b8)
 
 **White Paper Breakdown:**
@@ -1624,139 +1397,80 @@ mount
 **Overview of
 AWS: **[**http://d0.awsstatic.com/whitepapers/aws-overview.pdf**](http://d0.awsstatic.com/whitepapers/aws-overview.pdf)
 
-What is cloud computing? On demand delivery of IT resources and apps via
-the Internet w/ pay-as-you-go pricing. Cloud providers maintain the
-network-connected hardware while the consumer provisions and use what
-you need via web applications.
+What is cloud computing? On demand delivery of IT resources and apps via the Internet w/ pay-as-you-go pricing. Cloud providers maintain the network-connected hardware while the consumer provisions and use what you need via web applications.
 
 6 Advantages of Cloud:
 
 1.  Trade capex for “variable expense”
-
 2.  Benefit from economies of scale
-
 3.  Stop guessing about capacity
-
 4.  Increase speed & agility
-
 5.  Stop spending money running & maintaining datacenters
-
 6.  Go global in minutes
 
 **Overview of Security
 Processes: **[**http://d0.awsstatic.com/whitepapers/Security/AWS%20Security%20Whitepaper.pdf**](http://d0.awsstatic.com/whitepapers/Security/AWS%20Security%20Whitepaper.pdf)
 
--   State of the art electronic surveillance and multi factor access
-    > control systems
-
+-   State of the art electronic surveillance and multi factor accesscontrol systems
 -   Staffed 24×7 by security guards
-
 -   Access is least privilege based
 
-Shared Security Model – AWS is responsible for securing the underlying
-infrastructure. YOU are responsible for anything you put on or connects
-to the cloud
+Shared Security Model – AWS is responsible for securing the underlying infrastructure. YOU are responsible for anything you put on or connects to the cloud
 
 AWS responsibilities:
 
--   Infrastructure (hardware, software, networking, facilities)
-
--   Security configuration of it’s managed services (DynamoDB, RDS,
-    > Redshift, Elastic MapReduce, WorkSpaces)
+-   Infrastructure (hardware, virtual infrastructure, software, networking, facilities, infra security)
+-   Security configuration of it’s managed services (DynamoDB, RDS, Redshift, Elastic MapReduce, WorkSpaces)
 
 Customer responsibilities:
 
 -   IAAS – EC2, VPC, S3
-
--   Managed services – Amazon is responsible for patching, AV etc… but
-    > YOU are responsible for account mgmt. and user access. Recommended
-    > that MFA is implemented, SSL/TLS is used for communication, &
-    > API/user activity is logged using CloudTrail
+-   Managed services – Amazon is responsible for patching, AV etc… but YOU are responsible for account mgmt. and user access. Recommended that MFA is implemented, SSL/TLS is used for communication, & API/user activity is logged using CloudTrail
 
 Storage Decommissioning:
 
--   AWS uses NIST 800-88 to destroy data. All decommed magnetic storage
-    > devices are degaussed and physically destroyed.
+-   AWS uses NIST 800-88 to destroy data. All decommed magnetic storage devices are degaussed and physically destroyed.
 
 Network Security:
 
 -   Transmission Protection – Use HTTPS using SSL
-
--   For customers who need additional layers of network security, AWS
-    > provides VPCs & the ability to use an IPSec VPN between their
-    > datacenter & the VPC
-
--   Amazon Corporate Segregation – AWS production network is segregated
-    > from the Amazon corporate network by a means of a complex set of
-    > network security/segregation devices
-
+-   For customers who need additional layers of network security, AWS provides VPCs & the ability to use an IPSec VPN between their datacenter & the VPC
+-   Amazon Corporate Segregation – AWS production network is segregated from the Amazon corporate network by a means of a complex set of network security/segregation devices
 -   DDoS mitigation
-
 -   Prevent Man in the middle attacks (MITM)
-
--   Prevent IP Spoofing – the AWS controlled, host-based firewall will
-    > not permit an instance to send traffic with a source IP or MAC
-    > other than its own.
-
--   Prevent Port Scanning – Unauthorized port scans are a violation
-    > of T&Es. You must request a vulnerability scan in advance
-
+-   Prevent IP Spoofing – the AWS controlled, host-based firewall will not permit an instance to send traffic with a source IP or MAC other than its own.
+-   Prevent Port Scanning – Unauthorized port scans are a violation of T&Es. You must request a vulnerability scan in advance
 -   Prevent Packet Sniffing by other tenants
 
 AWS Credentials
 
 -   Passwords
-
 -   MFA
-
 -   Access Keys
-
 -   Key Pairs
-
 -   X.509 certs
 
 AWS Trusted Advisor
 
--   Inspects your AWS environment & makes recommendations to save money,
-    > improve performance & close security gaps:
-
+-   Inspects your AWS environment & makes recommendations to save money, improve performance & close security gaps:
 -   Provides alerts for several of the most common security misconfigs:
-
     -   Leaving certain ports open
-
     -   Not creating IAM accounts for internal users
-
     -   Allowing public access to S3 buckets
-
     -   Not turning on user activity logging (AWS CloudTrail)
-
     -   Not using MFA on your root AWS account
 
 Instance Isolation
 
--   Instances on same physical machine are isolated from each other via
-    > the Xen hypervisor.
-
--   The AWS firewall resides within the hypervisor layer, between the
-    > physical network interface & the instances virtual interface.
-
+-   Instances on same physical machine are isolated from each other via the Xen hypervisor.
+-   The AWS firewall resides within the hypervisor layer, between the physical network interface & the instances virtual interface.
     -   All packets must pass through this firewall
-
 -   Physical RAM is separated using similar mechanisms
-
--   Customer instances have no access to raw disk devices, only virtual
-    > disks
-
--   AWS proprietary disk virtualization layer resets every block of
-    > storage used by the customer
-
+-   Customer instances have no access to raw disk devices, only virtual disks
+-   AWS proprietary disk virtualization layer resets every block of storage used by the customer
     -   Ensures customer X data isn’t exposed to customer Y
-
--   Mem allocated to guest is scrubbed (zeroed out) by hypervisor when
-    > it becomes unprovisioned
-
+-   Mem allocated to guest is scrubbed (zeroed out) by hypervisor when it becomes unprovisioned
     -   Mem not returned to pool of free mem until scrubbing is complete
-
 -   Guest OS
 
     -   Instances are completely controlled by customer. AWS does not
