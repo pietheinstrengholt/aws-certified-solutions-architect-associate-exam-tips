@@ -397,7 +397,7 @@ mount
     -   Launch permissions that control with AWS accounts can use the AMI to launch instances
     -   Block device mapping that specifies which volumes to attach when launching instance
 -   By default, any AMI you create is private. You can modify image permission to make it public.
--   <img src="media/image2.png" width="620" height="396" />
+-   ![Image02](/images/060116_1515_AWSCertifie2.png?raw=true)
 -   **Read these articles on how to harden & clean up an AMI before making public!**
     -   <https://aws.amazon.com/articles/9001172542712674>
     -   <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/building-shared-amis.html>
