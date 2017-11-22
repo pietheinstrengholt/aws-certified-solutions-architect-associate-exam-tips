@@ -328,7 +328,8 @@ EC2 instances (think VMDKs)
 **\*Know how to create a VPC from memory for exam!\***
 -   When creating an AMI, on Step 4(Add storage) “Delete on Termination” is checked and not encrypted by default (i.e. Termination protection is turned off by default):
 
-<img src="media/image1.png" width="656" height="197" />
+![Image01](/images/060116_1515_AWSCertifie1.png?raw=true)
+
 -   On an EBS-backed instance, the default action is for the root EBS vol to be deleted when the instance is terminated.
 -   Root volumes cannot be encrypted by default, you’ll need a 3<sup>rd</sup> party tool (bit locker, etc) to encrypt root vols.
 
