@@ -1,7 +1,9 @@
 # AWS Certified Solutions Architect summary 
 
-After I have subscribed myself to A Cloud Guru I had the needs to write down a summary of what I learned. I found the following website: http://mistwire.com/2016/05/aws-certified-solutions-architect-associate-study-notes/
-Most of the information is still valid, although some things have been changed. I have updated the document below. Feel free to create a pull request to update any missing or incorrect information. A special thanks for Chris f Williams for putting this together.
+After I have subscribed myself to A Cloud Guru I had the needs to write down a summary of what I learned, before taking the AWS Certified Solutions Architect Exam. Most of the materials I found on the following website: http://mistwire.com/2016/05/aws-certified-solutions-architect-associate-study-notes/, So a special thanks for Chris f Williams for putting everything together.
+Most of the information is still valid, although some things have been changed. I also highly encourage you to have a look at the AWS 2016 re:Invent 2016 video's. They cover the most importance services you need to learn with a more detailed background compared to the videos from A Cloud Gure. 
+
+I have updated the document below. Feel free to create a pull request to update any missing or incorrect information.
 
 ### Reference materials
 
@@ -9,15 +11,21 @@ Most of the information is still valid, although some things have been changed. 
 -   AWS-CSA: <https://aws.amazon.com/certification/certified-solutions-architect-associate/>
 -   AWS Solutions Architect Associate exam blueprint: <https://d0.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_certified_solutions_architect_associate_blueprint.pdf>
 -   AWS Quick start reference architectures: <https://aws.amazon.com/architecture/>
--   AWS Whitepapers for AWS-CSA Exam Prep:
-    -   https://aws.amazon.com/faqs/
+-   AWS Whitepapers and video's for AWS-CSA Exam Prep:
+    -   AWS FAQ: https://aws.amazon.com/faqs/
+    -   Amazon S3 Masterclass: https://www.youtube.com/watch?v=VC0k-noNwOU
+    -   AWS re:Invent 2016: Deep Dive on Amazon EC2: https://www.youtube.com/watch?v=agQMFIWr2h4
+    -   AWS re:Invent 2016: Deep Dive on Amazon Relational Database Service: https://www.youtube.com/watch?v=pPLPzPYY5uU
+    -   AWS re:Invent 2016: Deep Dive on Amazon S3: https://www.youtube.com/watch?v=bMhWWkhydFQ
+    -   AWS re:Invent 2016: Creating Your Virtual Data Center: VPC Fundamentals and Connectivity: https://www.youtube.com/watch?v=Ul2NsPNh9Ik
+    
 
 **AWS – Concepts and Components**
 -   AWS Global Infrastructure
     -   12 Regions & 33 AZs, 5 more Regions & 11 more AZs coming throughout the next year
     -   Region = 2 or more AZs
     -   AZ = DataCenter
-    -   Edge Location = CDN End Points for CloudFront
+    -   Edge Location = CDN End Points for CloudFront (there are currently more edge locations than regions)
 -   Networking
     -   VPC = Virtual Private Cloud
     -   Direct Connect = connecting to AWS w/out using Internet connection
