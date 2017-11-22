@@ -993,92 +993,44 @@ Instance Isolation
 -   Mem allocated to guest is scrubbed (zeroed out) by hypervisor when it becomes unprovisioned
     -   Mem not returned to pool of free mem until scrubbing is complete
 -   Guest OS
-
-    -   Instances are completely controlled by customer. AWS does not
-        > have any access rights or back doors to guest OSes
-
-    -   AWS provides the ability to encrypt EBS volumes & their
-        > snapshots with AES-256
-
+    -   Instances are completely controlled by customer. AWS does not have any access rights or back doors to guest OSes
+    -   AWS provides the ability to encrypt EBS volumes & their snapshots with AES-256
 -   Firewall:
-
-    -   EC2 provides a complete firewall solution. By default inbound is
-        > DENY-ALL
-
+    -   EC2 provides a complete firewall solution. By default inbound is DENY-ALL
 -   ELB – SSL Termination on the load balancer is supported
-
-    -   Allows you to ID the originating IP address of a client
-        > connecting to your servers, whether you are using HTTPS or TCP
-        > load balancing
+    -   Allows you to ID the originating IP address of a client connecting to your servers, whether you are using HTTPS or TCP load balancing
 
 -   Direct Connect:
-
-    -   Slower to provision than a VPN because it’s a physical
-        > connection
-
-    -   Bypass ISPs in your network path (if you don’t want traffic to
-        > traverse Internet)
-
-    -   Procure rack space within the facility housing the AWS Direct
-        > Connect location & deploy your equipment nearby.
-
-    -   Connect this equipment to AWS Direct Connect using a
-        > cross-connect
-
-    -   Use VLANs (802.1q) to use 1 connection to access both
-        > public (S3) and private (EC2 in a VPC) AWS resources
-
+    -   Slower to provision than a VPN because it’s a physical connection
+    -   Bypass ISPs in your network path (if you don’t want traffic to traverse Internet)
+    -   Procure rack space within the facility housing the AWS Direct Connect location & deploy your equipment nearby.
+    -   Connect this equipment to AWS Direct Connect using a cross-connect
+    -   Use VLANs (802.1q) to use 1 connection to access both public (S3) and private (EC2 in a VPC) AWS resources
     -   Available in
-
         -   10Gbps
-
         -   1Gbps
-
-        -   Sub 1Gbps groups purchased through AWS Direct Connect
-            > Partners
+        -   Sub 1Gbps groups purchased through AWS Direct Connect Partners
 
 **Risk and
 Compliance**: <http://d0.awsstatic.com/whitepapers/compliance/AWS_Risk_and_Compliance_Whitepaper.pdf>
-
--   AWS mgmt. has a strategic business plan which includes risk
-    > identification & mitigation plans. This is re-evaluated at least
-    > bi-annually. 
-
--   AWS security regularly scans all Internet facing service endpoint IP
-    > addresses for vulnerabilities (these scans do not include
-    > customer instances)
-
--   Independent external vulnerability threat assessments are performed
-    > regularly by 3<sup>rd</sup> party security firms.
-
+-   AWS mgmt. has a strategic business plan which includes risk identification & mitigation plans. This is re-evaluated at least bi-annually. 
+-   AWS security regularly scans all Internet facing service endpoint IP addresses for vulnerabilities (these scans do not include customer instances)
+-   Independent external vulnerability threat assessments are performed regularly by 3<sup>rd</sup> party security firms.
     -   Not meant to replace a customer’s own vulnerability scans
 
 <!-- -->
 
 -   SOC 1/SSAE 16/ISAE 3402
-
 -   SOC2
-
 -   SOC3
-
 -   FISMA, DIACAP, & FedRAMP
-
--   PCI DSS Level 1   
-    > **can take credit card information with PCI compliance (software
-    > needs to be compliant too)**
-
+-   PCI DSS Level 1 **can take credit card information with PCI compliance (software needs to be compliant too)**
 -   ISO 27001
-
 -   ISO 9001
-
 -   ITAR
-
 -   FIPS 140-2
-
 -   HIPAA
-
 -   Cloud Security Alliance (CSA)
-
 -   Motion Picture Association of America (MPAA)
 
 AWS Platform:
@@ -1095,129 +1047,67 @@ AWS Platform:
 Practices: **[**http://d0.awsstatic.com/whitepapers/AWS\_Cloud\_Best\_Practices.pdf**](http://d0.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf)
 
 Business Benefits:
-
 -   Almost 0 upfront infrastructure investment
-
 -   JIT infrastructure
-
 -   More efficient resource utilization
-
 -   Usage-based pricing
-
 -   Reduced time to market
 
 Technical Benefits:
-
 -   Automation – “Scriptable infrastructure”
-
 -   Auto-scaling
-
 -   Proactive scaling
-
 -   More efficient dev lifecycle
-
 -   Improved testability
-
 -   DR/BC baked in
-
 -   “Overflow” traffic to the cloud
 
 Design for Failure:
-
 -   Assume that hardware will fail & outages will occur
-
 -   Assume that you will be overloaded with requests
-
--   By being a pessimist, you think about recovery strategies during
-    > design time, which helps you design an overall better system
+-   By being a pessimist, you think about recovery strategies during design time, which helps you design an overall better system
 
 Decouple your components:
-
--   Build components that do not have tight dependencies so that if 1
-    > component dies/sleeps/is busy, the other components are built so
-    > as to continue work as if no failure is happening.
-
+-   Build components that do not have tight dependencies so that if 1 component dies/sleeps/is busy, the other components are built so as to continue work as if no failure is happening.
 -   If you see decoupling in exam, think SQS
-
 -   WebServer – SQS – AppServer – SQS – DBServer
 
 Implement Elasticity:
-
--   Proactive Cyclic Scaling – periodic scaling that occurs @ fixed
-    > intervals (daily, weekly, monthly, quarterly) i.e. “Payroll
-    > Monday”
-
--   Proactive Event Scaling – when you are expecting a big surge of
-    > traffic (Black Friday, new product launch, marketing campaign)
-
--   Auto-scaling based on demand – Create triggers in monitoring to
-    > scale up/down resources
+-   Proactive Cyclic Scaling – periodic scaling that occurs @ fixed intervals (daily, weekly, monthly, quarterly) i.e. “Payroll Monday”
+-   Proactive Event Scaling – when you are expecting a big surge of traffic (Black Friday, new product launch, marketing campaign)
+-   Auto-scaling based on demand – Create triggers in monitoring to scale up/down resources
 
 Secure Your Application:
-
--   Only have the ports open to/from your various stacks to allow
-    > communication, no more (duh)
+-   Only have the ports open to/from your various stacks to allow communication, no more (duh)
 
 Consolidated Billing
-
 -   1 paying account for all linked accounts in an org
-
 -   Paying account gets 1 monthly bill
-
 -   Paying account cannot access resources of the linked accounts
-
 -   All linked accounts are independent of each other
-
 -   20 linked accounts for consolidated billing (soft limit)
-
 -   Easy to track charges & allocate costs
-
--   Volume pricing discount, resources of all your linked accounts are
-    > added up for discounts
+-   Volume pricing discount, resources of all your linked accounts are added up for discounts
 
 Resource Groups & Tagging
-
 -   Tags = Key/Value pairs attached to AWS resources
-
 -   Metadata
-
 -   Tags can be inherited sometimes:
-
-    -   Autoscaling, CloudFormation, Elastic Beanstalk can create other
-        > resources
-
+    -   Autoscaling, CloudFormation, Elastic Beanstalk can create other resources
 -   Resource Groups
-
-    -   Make it easy to group resources using the tags that are assigned
-        > to them
-
+    -   Make it easy to group resources using the tags that are assigned to them
     -   Contain info like:
-
         -   Region
-
         -   Name
-
         -   Health checks
-
         -   For EC2 – Public & Private IP addresses
-
         -   For ELB – Port configs
-
         -   For RDS – Database engine, etc.
-
     -   Use tag editor to find/modify resources in large volumes
 
 Active Directory Integration:
-
 -   User browses to ADFS URL
-
 -   User authenticates against AD
-
 -   User receives a SAML assertion
-
--   User’s browser posts the SAML assertion to the AWS sign-in endpoint
-    > for SAML
-
--   User’s browser receives the sign-in URL and is redirected to the
-    > console
-
+-   User’s browser posts the SAML assertion to the AWS sign-in endpoint for SAML
+-   User’s browser receives the sign-in URL and is redirected to the console
