@@ -1,14 +1,16 @@
-Main site for all certs: <https://aws.amazon.com/certification/>
+# AWS Certified Solutions Architect summary 
 
-AWS-CSA: <https://aws.amazon.com/certification/certified-solutions-architect-associate/>
+After I have subscribed myself to A Cloud Guru I had the needs to write down a summary of what I learned. I found the following website: http://mistwire.com/2016/05/aws-certified-solutions-architect-associate-study-notes/
+Most of the information is still valid, although some things have been changed. I have updated the document below. Feel free to create a pull request to update any missing or incorrect information. A special thanks for Chris f Williams for putting this together.
 
-AWS Solutions Architect Associate exam blueprint: <https://d0.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_certified_solutions_architect_associate_blueprint.pdf>
+### Reference materials
 
-AWS Quick start reference architectures: <https://aws.amazon.com/architecture/>
-
-AWS Whitepapers for AWS-CSA Exam Prep:
-
--   https://aws.amazon.com/faqs/
+-   Main site for all certs: <https://aws.amazon.com/certification/>
+-   AWS-CSA: <https://aws.amazon.com/certification/certified-solutions-architect-associate/>
+-   AWS Solutions Architect Associate exam blueprint: <https://d0.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_certified_solutions_architect_associate_blueprint.pdf>
+-   AWS Quick start reference architectures: <https://aws.amazon.com/architecture/>
+-   AWS Whitepapers for AWS-CSA Exam Prep:
+    -   https://aws.amazon.com/faqs/
 
 **AWS – Concepts and Components**
 -   AWS Global Infrastructure
