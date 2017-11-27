@@ -302,8 +302,8 @@ Pricing models:
 | I2         | High Speed Storage (**I**OPS) | NoSQL DBs, Data Warehousing      |
 | D2         | **D**ense Storage             | File srv, Hadoop                 |
 
-**EBS (Elastic Block Storage) – **Storage volumes that are attached to
-EC2 instances (think VMDKs)
+**EBS (Elastic Block Storage) – **Storage volumes that are attached to EC2 instances (think VMDKs)
+-   EBS versus EFS versus S3 https://stackoverflow.com/questions/29575877/aws-efs-vs-ebs-vs-s3-differences-when-to-use
 -   Can’t attach 1 EBS instance to 2 EC2 instances (use EFS for that)
 -   Can attach multiple EBS instances to 1 EC2 instance
     -   How to “grow” an EBS volume:
