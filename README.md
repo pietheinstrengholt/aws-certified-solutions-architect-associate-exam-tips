@@ -807,7 +807,6 @@ mount
 -   Set up route on private subnet to route through NAT instance
 
 **Access Control Lists (ACLs)**
-
 -   A numbered list of rules (in order, lowest applies first)
 -   Put down network access lists across the entire subnet
 -   Over rules security groups
@@ -819,7 +818,6 @@ mount
 **Application Services**
 
 **SQS – most important service going into exam**
-
 -   Read FAQ for SQS for exam: <https://aws.amazon.com/sqs/faqs/>
 -   A distributed message queueing service that sits between a “producer” and “consumer” to quickly and reliably cache that message.
 -   Allows you to decouple the components of an app so that they can run independently.
@@ -833,9 +831,11 @@ mount
 -   Can apply autoscaling to SQS 
 -   A single queue can be used by many app components with no need for those components to coordinate amongst themselves to share the queue
 -   SQS does NOT guarantee first in, first out (FIFO) delivery of message
-    -   If you want this, you need to place sequencing information in each message so that you can reorder the messages after they come out of queue
+    -   If you want this, you need to place sequencing information in each message so that you can reorder the messages after they come out of queue, or consider different queues when setting different priorities
 -   SQS is a pull based system
--   12 hour visibility time out by default
+-   30 seconds visibility time out by default
+-   12 hour maximum visibilty time (can be changed with ChangeMessageVisibiity method)
+-   Supports long polling (default is 20 seconds). Long poll waits and answers when messages arrive.
 -   Engineered to provide “at least once” delivery of mgs, but you should design your app so that processing a message more than once won’t create an error
 -   Messages can contain up to 256KB of text in any format
 -   Billed at 64KB “chunk” – a 25kKB msg will be 4 x 64KB “chunks”
