@@ -735,7 +735,6 @@ mount
         -   MySQL read replicas (currently 5)
 
 **VPC (Virtual Private Cloud)**
-
 -   **For the exam know how to build a custom VPC from memory**
     -   Create VPC
         -   Define IP range (automatically creates default route table)
@@ -846,7 +845,6 @@ mount
     -   Ex: 1 API call with a 256KB payload is billed as 4 requests
 
 **SWF – Simple Workflow Service**
-
 -   Makes it easy to coordinate work across distributed app components
 -   Enables apps to be designed as a coordination of tasks
 -   Tasks represent invocations of various processing steps in a app which can be performed by:
@@ -868,7 +866,6 @@ mount
     -   Activity workers – carry out tasks (payment now successful, go pull widget off shelf & mail it)
 
 **SNS – Simple Notification Service**
-
 -   Web service to setup, operate & send notifications from AWS.
 -   Scalable, flexible, cost-effective way to publish messages from an app & deliver them to subscribers or other apps
 -   Push notification to Apple, Google, Fire OS, Windows devices, etc..
@@ -906,7 +903,6 @@ mount
     -   $2.00 per 100,000 notification deliveries over email
 
 **Elastic Transcoder**
-
 -   Media transcoder in the cloud
 -   Converts media file from original source format into different formats that will play on different endpoint devices
 -   Provides transcoding presets for popular output formats
